@@ -8,15 +8,13 @@ int main(int argc, char *argv[])
     printf("input an integer : ");
     scanf("%d", &num);
     
-    if (num > 0) 
-            printf("it's a positive number.\n");
-            
-            else if (num < 0) 
-                 printf("it's a negative number.\n");
-            
-                 else 
-                      printf("it's zero.\n");
-                 
+    if (num < 0) {
+       num = -num;
+       printf("The absolute value is %d. \n", num);
+    }
+       
+    else 
+        printf("The absolute value is %d. \n", num);
     
     
    
