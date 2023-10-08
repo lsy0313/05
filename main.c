@@ -3,17 +3,15 @@
 
 int main(int argc, char *argv[])
 {
-    char c;
-    int count = 0;
+    int num, i, result = 0;
     
-    printf("input a string : ");
+    printf("input a number : ");
+    scanf("%d", &num);
     
-    while ((c = getchar()) != '\n') {
-          if (c >= '0' && c <= '9') {
-                count++;
-          }
-    }
-    printf("the number of digits is %d.\n", count);
+    for (i = 1; i <= num; i ++)
+        result += i;
+        
+    printf("The result : %d\n", result);
    
   system("PAUSE");
   
