@@ -3,20 +3,17 @@
 
 int main(int argc, char *argv[])
 {
-    int num;
+    char c;
+    int count = 0;
     
-    printf("input an integer : ");
-    scanf("%d", &num);
+    printf("input a string : ");
     
-    if (num < 0) {
-       num = -num;
-       printf("The absolute value is %d. \n", num);
+    while ((c = getchar()) != '\n') {
+          if (c >= '0' && c <= '9') {
+                count++;
+          }
     }
-       
-    else 
-        printf("The absolute value is %d. \n", num);
-    
-    
+    printf("the number of digits is %d.\n", count);
    
   system("PAUSE");
   
