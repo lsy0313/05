@@ -3,17 +3,33 @@
 
 int main(int argc, char *argv[])
 {
-    int num, i, result = 0;
+    int num1, num2, result;
+    char operator;
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &num1, &operator, &num2);
     
-    printf("input a number : ");
-    scanf("%d", &num);
+    switch (operator) {
+           case '+':
+                result = num1 + num2;
+                break;
+           case '-':
+                result = num1 - num2;
+                break;
+           case '*':
+                result = num1 * num2;
+                break;
+           case '/':
+                result = num1 / num2;
+                break;
+           case '%':
+                result = num1 % num2;
+                break;
+    }
     
-    for (i = 1; i <= num; i ++)
-        result += i;
-        
-    printf("The result : %d\n", result);
+    printf("The result is %d.\n", result);
+    
    
   system("PAUSE");
-  
+    
   return 0;
 }
